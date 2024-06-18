@@ -13,7 +13,7 @@ jobs :
         uses : docker/login-action@v1
         with : 
           username : ${{ secrets.DOCKERHUB_USER }}
-          password : ${{ secrets.DOCKERHUB_PASSWORD }}
+          password : ${{ secrets.DOCKERHUB_TOKEN }}
       - name : Check out - pull repository code #Github 코드를 가져오는 역할
         uses : actions/checkout@v2
       - name : Run TestCode
