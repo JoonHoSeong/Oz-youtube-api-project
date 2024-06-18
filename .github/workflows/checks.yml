@@ -14,7 +14,7 @@ jobs :
         with : 
           username : ${{ secrets.DOCKERHUB_USER }}
           password : ${{ secrets.DOCKERHUB_PASSWORD }}
-      - name : Check out #Github 코드를 가져오는 역할
+      - name : Check out - pull repository code #Github 코드를 가져오는 역할
         uses : actions/checkout@v2
       - name : Run TestCode
         run : docker-compose run --rm app sh -c 'python manage.py test'
