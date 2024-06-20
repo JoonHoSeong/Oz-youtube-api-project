@@ -19,4 +19,5 @@ class Command(BaseCommand):
             except (OperationalError, Psycopg2OPsycopgpError):
                 self.stdout.write("Retrying DB connection ...")
                 time.sleep(1)
-        self.stdout.write(self.style.SUCCESS("Congratue! PostgreSQL Connection Success!!!"))
+        self.stdout.write(self.style.SUCCESS("Congratue!\
+            PostgreSQL Connection Success!!!"))
